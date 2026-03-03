@@ -1,2 +1,4 @@
-THỰC HÀNH MÔN HỌC IE213
-Sinh viên Bùi Công Danh - 23520240 - IE213.Q21
+1. Thông tin sinh viên
+Họ tên: Bùi Công Danh
+MSSV: 23520240
+Lớp: IE213.Q21
