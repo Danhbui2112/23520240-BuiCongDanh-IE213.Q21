@@ -1,103 +1,65 @@
-﻿# IE213
-## 1. Thông tin sinh viên
+﻿# IE213 - Database Systems
+
+## 📌 Thông tin sinh viên
 
 | Thông tin | Chi tiết |
 |-----------|----------|
 | **Họ tên** | Bùi Công Danh |
 | **MSSV** | 23520240 |
 | **Lớp** | IE213.Q21 |
-| **Môn học** | IE213 |
+| **Môn học** | IE213 - Thiết kế hệ thống cơ sở dữ liệu |
 
 ---
 
-## 2. Danh sách các Lab
+## 📋 Danh sách các Lab
 
-| Lab | Tên | Mô tả | Trạng thái |
-|-----|-----|-------|-----------|
-| Lab 01 | MongoDB Basics | Học các lệnh cơ bản CRUD trong MongoDB | ✅ Hoàn thành |
-| Lab 02 |  
-| Lab 03 | 
-| Lab 04 | 
-| Lab 05 | 
-| Lab 06 | 
-
----
-
-## 3. Mô tả chi tiết từng Lab
-
-### 🔹 Lab 01: MongoDB Basics ✅
-**Nội dung chính:**
-- Kết nối và tạo database MongoDB
-- Thêm dữ liệu (insertMany) vào collection `employees`
-- Tìm kiếm dữ liệu với các điều kiện (find queries)
-- Cập nhật dữ liệu (updateMany) - thêm/xóa fields
-- Tạo unique index trên database
-- Sử dụng operators: `$gt`, `$lt`, `$in`, `$exists`, `$unset`
-- Aggregation pipeline: `$group`, `$sum`, `$avg`
-
-**File:** `Lab01/Lab1_23520240.mongodb.js` (52 lines)
-
-**Các lệnh chính:**
-```javascript
-use ('23520240-ie213')
-db.employees.insertMany([...])
-db.employees.find({ "age": { $gt: 30, $lt: 60 } })
-db.employees.updateMany({}, { $set: {...} })
-db.employees.aggregate([{ $group: {...} }])
-```
-
-### 🔹 Lab 02 - Lab 06
-*Chưa bắt đầu - Sẽ cập nhật trong các buổi học tiếp theo*
+| Lab | Tên | Trạng thái |
+|-----|-----|-----------|
+| Lab 01 | MongoDB Basics | ✅ Hoàn thành |
+| Lab 02 | - | ⏳ Sắp bắt đầu |
+| Lab 03 | - | ⏳ Sắp bắt đầu |
+| Lab 04 | - | ⏳ Sắp bắt đầu |
+| Lab 05 | - | ⏳ Sắp bắt đầu |
+| Lab 06 | - | ⏳ Sắp bắt đầu |
 
 ---
 
-## 4. Cách chạy chương trình
+## 🎯 Tiến độ hoàn thành
 
-### ✅ Lab 01 - MongoDB Basics: HOÀN THÀNH
-
-**Các hoạt động đã thực hiện:**
-- ✅ Tạo database `23520240-ie213`
-- ✅ Insert 6 employees vào collection
-- ✅ Tạo unique index trên field `id`
-- ✅ Query with operators ($gt, $lt, $exists)
-- ✅ Cập nhật documents (thêm/xóa fields)
-- ✅ Aggregation pipeline ($group, $sum, $avg)
-
-**Kết quả cuối cùng:**
-- 6 documents trong collection employees
-- 4 employees từ organization "UIT"
-- 2 employees từ organization "USSH"
-
-**Sample output aggregation:**
-```
-{
-  "_id": "UIT",
-  "totalAge": 160,
-  "averageAge": 40
-}
-{
-  "_id": "USSH",
-  "totalAge": 90,
-  "averageAge": 45
-}
-```
-## 5. Kết quả thực hiện
-
-
----
-
-## 6. Tình trạng hoàn thành
-
-### Tiến độ chung:
 ```
 ✅ Hoàn thành: 1/6 labs (16.7%)
 ⏳ Chưa bắt đầu: 5/6 labs (83.3%)
 ```
 
-### Chi tiết:
-- [x] **Lab 01** - MongoDB Basics ✅
-- [ ] **Lab 02** - 
-- [ ] **Lab 03** - 
+---
+
+## 📂 Cấu trúc thư mục
+
+Mỗi Lab có folder riêng và README.md chi tiết về nội dung bài:
+
+```
+IE213/
+├── README.md (tệp này - tổng quan chung)
+├── Lab01/
+│   ├── README.md (chi tiết Lab 01)
+│   └── Lab1_23520240.mongodb.js
+├── Lab02/
+│   └── README.md (chi tiết Lab 02)
+├── Lab03/
+│   └── README.md (chi tiết Lab 03)
+├── Lab04/
+│   └── README.md (chi tiết Lab 04)
+├── Lab05/
+│   └── README.md (chi tiết Lab 05)
+└── Lab06/
+    └── README.md (chi tiết Lab 06)
+```
+
+---
+
+## ℹ️ Hướng dẫn
+
+Để xem chi tiết từng Lab, vui lòng truy cập vào folder tương ứng và mở file **README.md**. 
 - [ ] **Lab 04** - 
 - [ ] **Lab 05** - 
 - [ ] **Lab 06** - 
