@@ -36,12 +36,17 @@ db.employees.insertMany([...])
 - Thêm 6 employees vào collection `employees`
 - Các fields: id, name, age, organization, position, salary
 
+![Kết quả bài 1, 2](images/Bai1,2.jpg)
+![Kết quả bài 4](images/bai4.jpg)
+
 ### 3. **Query dữ liệu (find)**
 ```javascript
 db.employees.find({ "age": { $gt: 30, $lt: 60 } })
 ```
 - Tìm kiếm với điều kiện
 - Sử dụng operators: `$gt` (greater than), `$lt` (less than), `$in`, `$exists`
+
+![Kết quả bài 5](images/bai5.jpg)
 
 ### 4. **Cập nhật dữ liệu (updateMany)**
 ```javascript
@@ -50,6 +55,10 @@ db.employees.updateMany({}, { $set: {...} })
 - Thêm/xóa fields bằng `$set` và `$unset`
 - Cập nhật toàn bộ hoặc một phần documents
 
+![Kết quả bài 8](images/bai8.jpg)
+![Kết quả bài 9](images/bai9.jpg)
+![Kết quả bài 9](images/kiemtrabai9.jpg)
+
 ### 5. **Tạo Index**
 ```javascript
 db.employees.createIndex({ "id": 1 }, { unique: true })
@@ -57,11 +66,16 @@ db.employees.createIndex({ "id": 1 }, { unique: true })
 - Tạo unique index trên field `id`
 - Đảm bảo không có id trùng lặp
 
+![Kết quả](images/bai3.jpg)
+
 ### 6. **Aggregation Pipeline**
 ```javascript
 db.employees.aggregate([
   { $group: { _id: "$organization", totalAge: { $sum: "$age" }, averageAge: { $avg: "$age" } } }
 ])
+
+![Kết quả bài 10](images/bai10.jpg)
+
 ```
 - Nhóm dữ liệu theo organization
 - Tính tổng tuổi và tuổi trung bình
